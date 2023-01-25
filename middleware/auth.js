@@ -10,6 +10,7 @@ function authenticateJWT(req, res, next) {
     const tokenFromBody = req.body._token;
     const payload = jwt.verify(tokenFromBody, SECRET_KEY);
     req.user = payload; // create a current user
+    console.log('got from token payload is', payload)
     return next();
   } catch (err) {
     return next();
@@ -19,6 +20,8 @@ function authenticateJWT(req, res, next) {
 /** Middleware: Requires user is authenticated. */
 
 function ensureLoggedIn(req, res, next) {
+  console.log('in ensuredloggedin')
+  console.log('username is', req.user)
   if (!req.user) {
     return next({ status: 401, message: "Unauthorized" });
   } else {

@@ -1,10 +1,10 @@
 {
   "name": "messagely",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest -i"
+    "test": "jest -i",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,8 +15,18 @@
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
     "express-cors": "0.0.3",
-    "jsonwebtoken": "^8.3.0",
+    "jsonwebtoken": "^9.0.0",
     "pg": "^8.3.3",
     "supertest": "^4.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanakatoo/express-messagely.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/tanakatoo/express-messagely/issues"
+  },
+  "homepage": "https://github.com/tanakatoo/express-messagely#readme",
+  "description": ""
 }
